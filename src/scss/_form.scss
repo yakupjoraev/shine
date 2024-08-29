@@ -1,0 +1,402 @@
+.form {
+  margin: 150px 0;
+
+  @media (max-width: $breakpoint1450) {
+    margin: 80px 0;
+  }
+
+  @media (max-width: $breakpoint992) {
+    margin: 60px 0;
+  }
+
+  @media (max-width: $breakpoint768) {
+    margin: 40px 0;
+  }
+
+  // .form__inner
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 140px;
+
+    .section-head {
+      flex: 0 1 440px;
+    }
+
+    .section-title {
+      font-size: 48px;
+    }
+
+    @media (max-width: $breakpoint992) {
+      flex-direction: column;
+      row-gap: 24px;
+
+      .section-head {
+        flex: 0 1 auto;
+      }
+    }
+
+    @media (max-width: $breakpoint768) {
+      .section-title {
+        font-size: 24px;
+      }
+    }
+  }
+
+  // .form__main
+
+  &__main {
+    flex: 0 1 576px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 40px;
+    background: radial-gradient(50% 50% at 50% 50%, rgb(49, 49, 49) 0%, rgb(11, 11, 11) 100%);
+
+    @media (max-width: $breakpoint992) {
+      flex: 0 1 auto;
+    }
+
+    @media (max-width: $breakpoint768) {
+      padding: 20px;
+    }
+  }
+
+  // .form__rows
+
+  &__rows {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  // .form__row
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+  }
+
+  // .form__label
+
+  &__label {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    color: var(--white);
+  }
+
+  // .form__input
+
+  &__input {
+    padding: 10px 24px;
+    width: 100%;
+    height: 48px;
+    background: #151515;
+    border: 1px solid #707070;
+    border-radius: 3px;
+    outline: 0;
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 105%;
+    color: #7d7d7d;
+
+    @media (hover:hover) {
+      &:hover {
+        border-color: var(--primary);
+      }
+    }
+
+    &::placeholder {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 105%;
+      color: #7d7d7d;
+    }
+
+    &:active,
+    &:focus {
+      border-color: var(--primary);
+    }
+  }
+
+  // .form__datepicker
+
+  &__datepicker {
+    position: relative;
+    padding: 0;
+  }
+
+  // .form__datepicker-input
+
+  &__datepicker-input {
+    width: 100%;
+    padding: 10px 24px;
+    display: block;
+    height: 48px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 105%;
+    color: #7d7d7d;
+
+    &::placeholder {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 105%;
+      color: #7d7d7d;
+    }
+  }
+
+  // .form__datepicker-icon
+
+  &__datepicker-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  // .form__btn
+
+  &__btn {
+    width: 100%;
+  }
+}
+
+.form {
+
+  // .form__tg
+
+  &__tg {
+    position: relative;
+    border-radius: 10px;
+    padding: 60px 110px;
+    margin-top: 120px;
+    background: radial-gradient(50% 50% at 50% 50%, rgb(126, 185, 249) 0%, rgb(29, 140, 215) 100%);
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      top: 0;
+      width: 460px;
+      height: 360px;
+      background-image: image-set(url("../img/form/tg-bg.webp") 1x type("image/webp"), url("../img/form/tg-bg.png") 1x, url("../img/form/tg-bg@2x.webp") 2x type("image/webp"), url("../img/form/tg-bg@2x.png") 2x);
+      background-image: -webkit-image-set(url("../img/form/tg-bg.webp") 1x type("image/webp"), url("../img/form/tg-bg.png") 1x, url("../img/form/tg-bg@2x.webp") 2x type("image/webp"), url("../img/form/tg-bg@2x.png") 2x);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    @media (max-width: $breakpoint992) {
+      margin-top: 60px;
+
+      &::before {
+        content: none;
+      }
+    }
+
+    @media (max-width: $breakpoint768) {
+      margin-top: 40px;
+      padding: 40px 20px;
+    }
+  }
+
+  // .form__tg-info
+
+  &__tg-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    width: 55%;
+
+    @media (max-width: $breakpoint992) {
+      width: 100%;
+    }
+  }
+
+  // .form__tg-title
+
+  &__tg-title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    color: var(--white);
+
+    @media (max-width: $breakpoint992) {
+      font-size: 30px;
+
+      br {
+        display: none;
+      }
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 20px;
+    }
+  }
+
+  // .form__tg-text
+
+  &__tg-text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--white);
+  }
+
+  // .form__tg-btn
+
+  &__tg-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    width: 238px;
+    height: 48px;
+    background: linear-gradient(180deg, #fff 0%, #ccc 93%, #dedede 100%);
+
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    color: var(--black);
+
+    @media (max-width: $breakpoint768) {
+      width: 100%;
+    }
+  }
+}
+
+
+.datepicker {
+  width: 100%;
+  height: 48px;
+  cursor: pointer;
+}
+
+.datepicker__header {
+  background: var(--primary);
+}
+
+.datepicker__wrapper {
+  border-color: var(--primary);
+}
+
+.datepicker__prev:hover,
+.datepicker__next:hover {
+  background-color: var(--black);
+}
+
+.datepicker table th {
+  color: var(--black);
+}
+
+.datepicker__day.is-disabled,
+.datepicker__day.is-otherMonth {
+  color: var(--grey);
+}
+
+.datepicker__day.is-today {
+  color: var(--primary);
+}
+
+.datepicker__day.is-selected div {
+  background: var(--primary);
+}
+
+.datepicker__day div:hover,
+.datepicker__day.is-highlighted div {
+  background: var(--primary);
+}
+
+.datepicker__day div:active,
+.datepicker__day.is-highlighted div {
+  background: var(--primary);
+}
+
+
+.datepicker__day div:focus,
+.datepicker__day.is-highlighted div {
+  background: var(--primary);
+}
+
+
+.select-wrapper {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 16px;
+    right: 16px;
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.35356 10.854C8.25981 10.9476 8.13272 11.0002 8.00022 11.0002C7.86772 11.0002 7.74064 10.9476 7.64689 10.854L2.64689 5.85396C2.55857 5.75918 2.51049 5.63382 2.51277 5.50428C2.51506 5.37475 2.56753 5.25116 2.65914 5.15955C2.75075 5.06794 2.87434 5.01547 3.00387 5.01318C3.13341 5.0109 3.25877 5.05898 3.35356 5.1473L8.00022 9.79396L12.6469 5.1473C12.6927 5.09817 12.7479 5.05877 12.8092 5.03144C12.8705 5.00412 12.9367 4.98942 13.0039 4.98824C13.071 4.98705 13.1377 4.9994 13.2 5.02455C13.2622 5.0497 13.3188 5.08713 13.3662 5.13461C13.4137 5.18208 13.4512 5.23864 13.4763 5.3009C13.5015 5.36316 13.5138 5.42984 13.5126 5.49698C13.5114 5.56411 13.4967 5.63032 13.4694 5.69166C13.4421 5.75299 13.4027 5.80819 13.3536 5.85396L8.35356 10.854Z' fill='white' /%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+  }
+}
+
+.custom-select-opener {
+  display: flex;
+  align-items: center;
+  padding: 10px 24px;
+  width: 100%;
+  height: 48px;
+  background: #151515;
+  border: 1px solid #707070;
+  border-radius: 3px;
+  outline: 0;
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 105%;
+  color: #7d7d7d;
+
+  @media (hover:hover) {
+    &:hover {
+      border-color: var(--primary);
+    }
+  }
+
+  &::placeholder {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 105%;
+    color: #7d7d7d;
+  }
+
+  &:active,
+  &:focus {
+    border-color: var(--primary);
+  }
+}
+
+.custom-select-panel {
+  background-color: #151515;
+}
+
+.custom-select-option.has-focus {
+  background-color: var(--primary);
+}

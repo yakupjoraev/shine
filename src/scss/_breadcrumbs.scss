@@ -1,0 +1,122 @@
+.breadcrumbs {
+
+  // .breadcrumbs__inner
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid rgb(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgb(255, 255, 255, 0.15);
+
+    @media (max-width: $breakpoint480) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      row-gap: 24px;
+    }
+  }
+
+  // .breadcrumbs__list
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+
+    @media (max-width: $breakpoint480) {
+      flex-wrap: wrap;
+    }
+  }
+
+  // .breadcrumbs__item
+
+  &__item {
+    position: relative;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--grey);
+
+    &:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      right: -24px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.0835 9.99992L7.91683 14.1666L7.91683 5.83325L12.0835 9.99992Z' fill='white' /%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+    }
+  }
+
+  // .breadcrumbs__link
+
+  &__link {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--grey);
+    transition: color 0.2s linear;
+
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 1;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+
+
+    @media (hover:hover) {
+      &:hover {
+        color: var(--primary);
+      }
+    }
+  }
+
+  // .breadcrumbs__back
+
+  &__back {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-left: auto;
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--grey);
+    transition: color 0.2s linear;
+
+    img {
+      transition: transform 0.2s linear;
+    }
+
+    @media (hover:hover) {
+      &:hover {
+        color: var(--primary);
+
+        img {
+          transform: translateX(-5px);
+        }
+      }
+    }
+
+    @media (max-width: $breakpoint480) {
+      margin-left: 0;
+    }
+  }
+}

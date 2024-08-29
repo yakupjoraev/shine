@@ -1,0 +1,33 @@
+// Global SCSS-files imports
+@import './fonts';
+@import './vars';
+@import './reset';
+@import './global';
+@import './base';
+
+// Sections or Pages SCSS-files imports
+@import './header';
+@import './breadcrumbs';
+@import './service';
+@import './benefits';
+@import './steps-works';
+@import './faq';
+@import './about-studia';
+@import './form';
+
+
+
+
+
+// mini components SCSS-files imports
+@import './accordion';
+@import './socials';
+@import './contacts';
+@import './logo';
+
+
+
+@import './footer';
+
+// Libs
+// @import './libs/swiper';

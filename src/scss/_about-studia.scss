@@ -1,0 +1,102 @@
+.about-studia {
+  margin: 150px 0;
+
+  @media (max-width: $breakpoint1450) {
+    margin: 80px 0;
+  }
+
+  @media (max-width: $breakpoint992) {
+    margin: 60px 0;
+  }
+
+  @media (max-width: $breakpoint768) {
+    margin: 40px 0;
+  }
+
+  // .about-studia__inner
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 40px;
+
+    .section-head {
+      flex: 0 1 570px;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: $breakpoint992) {
+      flex-direction: column;
+      row-gap: 24px;
+
+      .section-head {
+        flex: 0 1 auto;
+      }
+
+      .section-text {
+        max-width: 100%;
+      }
+    }
+  }
+
+  // .about-studia__list
+
+  &__list {
+    flex: 0 1 570px;
+    margin-top: 350px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+    row-gap: 16px;
+
+    @media (max-width: $breakpoint992) {
+      flex: 0 1 auto;
+      justify-content: center;
+      justify-items: center;
+      margin: 200px auto 0;
+    }
+
+    @media (max-width: $breakpoint768) {
+      margin: 100px auto 0;
+    }
+  }
+
+  // .about-studia__item
+
+  &__item {
+
+    &:nth-child(odd) {
+      margin-top: -200px;
+    }
+
+    img {
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    @media (max-width: $breakpoint768) {
+
+
+      &:nth-child(odd) {
+        margin-top: -100px;
+      }
+
+      img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.container {}
+
+.section-head {}
+
+.section-sum {}
+
+.section-title {}
+
+.section-text {}

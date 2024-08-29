@@ -1,0 +1,141 @@
+.steps-works {
+  margin: 150px 0;
+
+  @media (max-width: $breakpoint1450) {
+    margin: 80px 0;
+  }
+
+  @media (max-width: $breakpoint992) {
+    margin: 60px 0;
+  }
+
+  @media (max-width: $breakpoint768) {
+    margin: 40px 0;
+  }
+
+  // .steps-works__inner
+
+  &__inner {
+    .section-head {
+      margin-bottom: 60px;
+
+      @media (max-width: $breakpoint992) {
+        margin-bottom: 40px;
+      }
+
+      @media (max-width: $breakpoint768) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  // .steps-works__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    row-gap: 32px;
+    list-style: none;
+    counter-reset: item;
+
+    @media (max-width: $breakpoint992) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 24px;
+      row-gap: 24px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  // .steps-works__item
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .steps-works__item-top
+
+  &__item-top {
+    position: relative;
+    height: 260px;
+    margin-bottom: 24px;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  // .steps-works__item-bage
+
+  &__item-bage {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: #ffa53d;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 90%;
+    text-align: center;
+    color: var(--white);
+  }
+
+  // .steps-works__item-info
+
+  &__item-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  // .steps-works__item-label
+
+  &__item-label {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    color: var(--white);
+
+    @media (max-width: $breakpoint992) {
+      font-size: 26px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 20px;
+    }
+  }
+
+  // .steps-works__item-texts
+
+  &__item-texts {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    p {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 120%;
+      color: var(--grey);
+    }
+
+    @media (max-width: $breakpoint768) {
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}

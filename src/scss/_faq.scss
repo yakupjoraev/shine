@@ -1,0 +1,49 @@
+.faq {
+  margin: 150px 0;
+
+  @media (max-width: $breakpoint1450) {
+    margin: 80px 0;
+  }
+
+  @media (max-width: $breakpoint992) {
+    margin: 60px 0;
+  }
+
+  @media (max-width: $breakpoint768) {
+    margin: 40px 0;
+  }
+
+  // .faq__inner
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 40px;
+
+    @media (max-width: $breakpoint992) {
+      flex-direction: column;
+      row-gap: 24px;
+    }
+
+  }
+
+  .section-head {
+    flex: 0 1 400px;
+
+    @media (max-width: $breakpoint992) {
+      flex: 0 1 auto;
+    }
+
+  }
+
+  // .faq__accordion
+
+  &__accordion {
+    flex: 0 1 722px;
+
+    @media (max-width: $breakpoint992) {
+      flex: 0 1 auto;
+    }
+
+  }
+}

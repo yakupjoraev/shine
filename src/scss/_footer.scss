@@ -1,0 +1,47 @@
+// Footer
+.footer {
+  padding: 100px 0;
+
+  @media (max-width: $breakpoint992) {
+    padding: 60px 0;
+  }
+
+  // .footer__inner
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+
+    @media (max-width: $breakpoint1450) {
+      flex-direction: column;
+      row-gap: 30px;
+
+      .logo {
+        order: 1;
+      }
+
+      .contacts {
+        order: 2;
+      }
+
+      .socials {
+        order: 3;
+      }
+    }
+  }
+
+  // .footer__copy
+
+  &__copy {
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--white);
+
+    @media (max-width: $breakpoint1450) {
+      order: 4;
+      text-align: center;
+    }
+  }
+}
