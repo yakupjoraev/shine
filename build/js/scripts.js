@@ -75,6 +75,44 @@ function serviceSlider() {
 serviceSlider();
 
 
+function worksSlider() {
+  const container = document.querySelector('.works');
+
+  if (!container) {
+    return null
+  }
+
+  const swiper = new Swiper(".works__slider-thumbs", {
+    spaceBetween: 10,
+    slidesPerView: 'auto',
+    // centeredSlides: true,
+    // freeMode: true,
+    watchSlidesProgress: true,
+  });
+  const swiper2 = new Swiper(".works__slider", {
+    slidesPerView: 'auto',
+    spaceBetween: 2,
+    thumbs: {
+      swiper: swiper,
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        spaceBetween: 2,
+      },
+
+      768: {
+        spaceBetween: 10,
+      }
+    }
+  });
+}
+
+worksSlider();
+
+
 // Аккордеон
 const accordionItems = document.querySelectorAll('[data-accordion-item]');
 let openAccordion = null; // переменная для хранения ссылки на открытый аккордеон

@@ -1,0 +1,139 @@
+.our-services {
+  margin: 150px 0;
+
+  @media (max-width: $breakpoint1450) {
+    margin: 80px 0;
+  }
+
+  @media (max-width: $breakpoint992) {
+    margin: 60px 0;
+  }
+
+  @media (max-width: $breakpoint768) {
+    margin: 40px 0;
+  }
+
+  // .our-services__inner
+
+  &__inner {
+    .section-head {
+      margin-bottom: 48px;
+    }
+  }
+
+  // .our-services__list
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 14px;
+    row-gap: 14px;
+
+    @media (max-width: $breakpoint992) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  // .our-services__item
+
+  &__item {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    padding: 32px 20px 24px;
+    border-radius: 10px;
+    min-height: 340px;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.5s linear;
+    }
+
+    @media (hover:hover) {
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    @media (max-width: $breakpoint768) {
+      min-height: 300px;
+    }
+  }
+
+  // .our-services__item-label
+
+  &__item-label {
+    min-height: 60px;
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    color: var(--white);
+
+    @media (max-width: $breakpoint992) {
+      font-size: 18px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 16px;
+      min-height: 50px;
+    }
+  }
+
+  // .our-services__item-text
+
+  &__item-text {
+    margin-bottom: 10px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--grey);
+  }
+
+  // .our-services__item-btn
+
+  &__item-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    margin-top: auto;
+    border-radius: 6px;
+    height: 48px;
+    outline: 0;
+    border: 1px solid var(--primary);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    color: var(--white);
+    transition: 0.2s linear;
+
+    @media (hover:hover) {
+      &:hover {
+        background: var(--primary);
+        color: var(--white);
+      }
+    }
+  }
+}

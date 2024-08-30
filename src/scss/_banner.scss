@@ -1,0 +1,117 @@
+.banner {
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+  padding: 50px;
+  margin-top: 12px;
+  background: linear-gradient(90deg, #d75902 0%, #f47701 31.56%, #ff8b04 47.96%, #fea406 72.34%, #ffb70b 100%);
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 105%;
+    height: 110%;
+    border-radius: 10px;
+    background-image: image-set(url("../img/banner/1.webp") 1x type("image/webp"), url("../img/banner/1.png") 1x, url("../img/banner/1@2x.webp") 2x type("image/webp"), url("../img/banner/1@2x.png") 2x);
+    background-image: -webkit-image-set(url("../img/banner/1.webp") 1x type("image/webp"), url("../img/banner/1.png") 1x, url("../img/banner/1@2x.webp") 2x type("image/webp"), url("../img/banner/1@2x.png") 2x);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+  }
+
+  @media (max-width: $breakpoint992) {
+    // margin-top: 60px;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  @media (max-width: $breakpoint768) {
+    margin-top: 40px;
+    padding: 40px 20px;
+  }
+
+  // .banner__inner
+
+  &__inner {}
+
+  // .banner__info
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    width: 440px;
+
+    @media (max-width: $breakpoint992) {
+      width: 100%;
+    }
+  }
+
+  // .banner__title
+
+  &__title {
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    color: var(--white);
+
+    @media (max-width: $breakpoint992) {
+      font-size: 30px;
+
+      br {
+        display: none;
+      }
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 20px;
+    }
+  }
+
+  // .banner__text
+
+  &__text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: var(--white);
+  }
+
+  // .banner__btn
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    width: 238px;
+    height: 48px;
+    background: linear-gradient(180deg, #fff 0%, #ccc 93%, #dedede 100%);
+
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    color: var(--black);
+
+    @media (hover:hover) {
+      &:hover {
+        background: var(--primary);
+        color: var(--white);
+      }
+    }
+
+    @media (max-width: $breakpoint768) {
+      width: 100%;
+    }
+  }
+}

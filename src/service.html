@@ -15,6 +15,14 @@
 
 <body class="main__body">
   <div class="wrapper">
+    <div class="car car-bottom">
+      <picture>
+        <source srcset="./img/bg/car-2.webp 1x, ./img/bg/car-2@2x.webp 2x" type="image/webp">
+        <source srcset="./img/bg/car-2.png 1x, ./img/bg/car-2@2x.png 2x" type="image/png">
+        <img src="./img/bg/car-2.png" srcset="./img/bg/car-2@2x.png" alt="car pic">
+      </picture>
+    </div>
+
     <!-- Header -->
     @@include('./html/_header.html')
 
@@ -22,6 +30,7 @@
     <main>
       @@include('./html/_breadcrumbs.html')
       @@include('./html/_service.html')
+      @@include('./html/_works.html')
       @@include('./html/_benefits.html')
       @@include('./html/_steps-works.html')
       @@include('./html/_faq.html')

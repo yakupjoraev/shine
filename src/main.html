@@ -11,11 +11,21 @@
 
 <body class="main__body">
   <div class="wrapper">
+    <div class="car car-top">
+      <picture>
+        <source srcset="./img/bg/car.webp 1x, ./img/bg/car@2x.webp 2x" type="image/webp">
+        <source srcset="./img/bg/car.png 1x, ./img/bg/car@2x.png 2x" type="image/png">
+        <img src="./img/bg/car.png" srcset="./img/bg/car@2x.png" alt="car pic">
+      </picture>
+    </div>
+
     <!-- Header -->
     @@include('./html/_header.html')
 
     <!-- Main Page -->
     <main>
+      @@include('./html/_hero.html')
+      @@include('./html/_our-services.html')
       @@include('./html/_faq-num.html')
       @@include('./html/_about-studia.html')
     </main>

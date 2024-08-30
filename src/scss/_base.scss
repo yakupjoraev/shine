@@ -1,10 +1,12 @@
 .wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background-image: url('../img/bg.svg');
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 
   main {
     flex-grow: 1;
@@ -15,6 +17,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 32px;
+  margin-bottom: 32px;
 }
 
 .section-sum {
@@ -94,4 +97,29 @@
   @media (max-width: $breakpoint480) {
     width: 100%;
   }
+}
+
+.car {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  user-select: none;
+  pointer-events: none;
+
+  img {
+    min-width: 1500px;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.car-top {
+  top: 0;
+}
+
+.car-bottom {
+  bottom: 0;
 }
