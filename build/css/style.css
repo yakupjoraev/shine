@@ -2784,6 +2784,12 @@ body.locked {
 }
 
 @media (hover: hover) {
+  .btn:hover {
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffa63d), to(#ba5a02));
+    background: -o-linear-gradient(bottom, #ffa63d 0%, #ba5a02 100%);
+    background: linear-gradient(0deg, #ffa63d 0%, #ba5a02 100%);
+  }
+
   .menu__item:hover .menu__item-link img {
     -webkit-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
