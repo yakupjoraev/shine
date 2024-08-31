@@ -274,7 +274,32 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+function specialTabs() {
+  const container = document.querySelector('.special');
 
+  if (!container) {
+    return null
+  }
+
+  const tabButtons = document.querySelectorAll('.special__btn');
+  const tabContents = document.querySelectorAll('.special__content');
+
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const target = button.getAttribute('data-tab-btn');
+
+      // Удаляем класс active у всех кнопок и контента
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      tabContents.forEach(content => content.classList.remove('active'));
+
+      // Добавляем класс active к выбранной кнопке и соответствующему контенту
+      button.classList.add('active');
+      document.querySelector(`.special__content[data-tab-content="${target}"]`).classList.add('active');
+    });
+  });
+}
+
+specialTabs();
 
 
 
