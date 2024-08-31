@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Index</title>
+  <link rel="stylesheet" href="./css/custom-select.css">
+  <link rel="stylesheet" href="./css/datepicker.material.css">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -532,17 +534,664 @@
 
       <div class="calculation__main">
         <form class="calculation-form" action="#">
-          <div class="calculation-form__block" data-calculation-block="start">
-            <div class="calculation-form__main"></div>
-            <div class="calculation-form__aside"></div>
+          <div class="calculation-form__block calculation-form__block--first  active" data-calculation-block="start">
+            <div class="calculation-form__inner">
+              <div class="calculation-form__progress">
+                <div class="calculation-form__progress-line">
+                  <div class="calculation-form__progress-line-inner" style="width: 15%;"></div>
+                </div>
+                <div class="calculation-form__progress-steps">
+                  <div class="calculation-form__progress-step active">Шаг 1</div>
+                  <div class="calculation-form__progress-step">Шаг 2</div>
+                  <div class="calculation-form__progress-step">Шаг 3</div>
+                  <div class="calculation-form__progress-step">Финиш</div>
+                </div>
+              </div>
+
+              <div class="calculation-form__main">
+                <h3 class="calculation-form__title">Выберите тип кузова Вашего автомобиля</h3>
+
+                <div class="calculation-form__content">
+                  <div class="calculation-form__start">
+                    <div class="calculation-form__start-picture">
+                      <picture>
+                        <source
+                          srcset="./img/calculation-form/start/car.webp 1x, ./img/calculation-form/start/car@2x.webp 2x"
+                          type="image/webp">
+                        <source
+                          srcset="./img/calculation-form/start/car.png 1x, ./img/calculation-form/start/car@2x.png 2x"
+                          type="image/png">
+                        <img src="./img/calculation-form/start/car.png" srcset="./img/calculation-form/start/car@2x.png"
+                          alt="car pic">
+                      </picture>
+                    </div>
+
+                    <p class="calculation-form__text">
+                      Vulputate in eget ultrices ipsum tristique. At id magnis lacinia mauris morbi morbi quam
+                      pellentesque.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="calculation-form__footer">
+                  <button type="button" class="calculation-form__btn btn">
+                    <span>Выбрать</span>
+                    <img width="30" height="30" src="./img/icons/form-arrow.svg" alt="arrow icon">
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="calculation-form__aside">
+              <div class="calculation-form__types">
+                <div class="calculation-form__type">
+                  <input class="calculation-form__type-input" type="radio" name="type-car" id="type-car-1" checked>
+                  <label class="calculation-form__type-label" for="type-car-1">
+                    <img class="calculation-form__type-img" width="56" height="56"
+                      src="./img/calculation-form/types/1.svg" alt="type car icon">
+                    <img class="calculation-form__type-img-active" width="56" height="56"
+                      src="./img/calculation-form/types/1-active.svg" alt="type car icon">
+                    <p class="calculation-form__type-text">Седан</p>
+                  </label>
+                </div>
+
+                <div class="calculation-form__type">
+                  <input class="calculation-form__type-input" type="radio" name="type-car" id="type-car-2">
+                  <label class="calculation-form__type-label" for="type-car-2">
+                    <img class="calculation-form__type-img" width="56" height="56"
+                      src="./img/calculation-form/types/2.svg" alt="type car icon">
+                    <img class="calculation-form__type-img-active" width="56" height="56"
+                      src="./img/calculation-form/types/2-active.svg" alt="type car icon">
+                    <p class="calculation-form__type-text">Хетчбек</p>
+                  </label>
+                </div>
+
+                <div class="calculation-form__type">
+                  <input class="calculation-form__type-input" type="radio" name="type-car" id="type-car-3">
+                  <label class="calculation-form__type-label" for="type-car-3">
+                    <img class="calculation-form__type-img" width="56" height="56"
+                      src="./img/calculation-form/types/3.svg" alt="type car icon">
+                    <img class="calculation-form__type-img-active" width="56" height="56"
+                      src="./img/calculation-form/types/3-active.svg" alt="type car icon">
+                    <p class="calculation-form__type-text">Кроссовер</p>
+                  </label>
+                </div>
+
+                <div class="calculation-form__type">
+                  <input class="calculation-form__type-input" type="radio" name="type-car" id="type-car-4">
+                  <label class="calculation-form__type-label" for="type-car-4">
+                    <img class="calculation-form__type-img" width="56" height="56"
+                      src="./img/calculation-form/types/4.svg" alt="type car icon">
+                    <img class="calculation-form__type-img-active" width="56" height="56"
+                      src="./img/calculation-form/types/4-active.svg" alt="type car icon">
+                    <p class="calculation-form__type-text">Джип</p>
+                  </label>
+                </div>
+
+                <div class="calculation-form__type">
+                  <input class="calculation-form__type-input" type="radio" name="type-car" id="type-car-5">
+                  <label class="calculation-form__type-label" for="type-car-5">
+                    <img class="calculation-form__type-img" width="56" height="56"
+                      src="./img/calculation-form/types/5.svg" alt="type car icon">
+                    <img class="calculation-form__type-img-active" width="56" height="56"
+                      src="./img/calculation-form/types/5-active.svg" alt="type car icon">
+                    <p class="calculation-form__type-text">Универсал</p>
+                  </label>
+                </div>
+
+                <div class="calculation-form__type">
+                  <input class="calculation-form__type-input" type="radio" name="type-car" id="type-car-6">
+                  <label class="calculation-form__type-label" for="type-car-6">
+                    <img class="calculation-form__type-img" width="56" height="56"
+                      src="./img/calculation-form/types/6.svg" alt="type car icon">
+                    <img class="calculation-form__type-img-active" width="56" height="56"
+                      src="./img/calculation-form/types/6-active.svg" alt="type car icon">
+                    <p class="calculation-form__type-text">Купе</p>
+                  </label>
+                </div>
+
+                <div class="calculation-form__type">
+                  <input class="calculation-form__type-input" type="radio" name="type-car" id="type-car-7">
+                  <label class="calculation-form__type-label" for="type-car-7">
+                    <img class="calculation-form__type-img" width="56" height="56"
+                      src="./img/calculation-form/types/7.svg" alt="type car icon">
+                    <img class="calculation-form__type-img-active" width="56" height="56"
+                      src="./img/calculation-form/types/7-active.svg" alt="type car icon">
+                    <p class="calculation-form__type-text">Пикап</p>
+                  </label>
+                </div>
+
+                <div class="calculation-form__type">
+                  <input class="calculation-form__type-input" type="radio" name="type-car" id="type-car-8">
+                  <label class="calculation-form__type-label" for="type-car-8">
+                    <img class="calculation-form__type-img" width="56" height="56"
+                      src="./img/calculation-form/types/8.svg" alt="type car icon">
+                    <img class="calculation-form__type-img-active" width="56" height="56"
+                      src="./img/calculation-form/types/8-active.svg" alt="type car icon">
+                    <p class="calculation-form__type-text">Минивэн</p>
+                  </label>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="calculation-form__block"></div>
+          <div class="calculation-form__block" data-calculation-block="2">
+            <div class="calculation-form__inner">
+              <div class="calculation-form__progress">
+                <div class="calculation-form__progress-line">
+                  <div class="calculation-form__progress-line-inner" style="width: 50%;"></div>
+                </div>
+                <div class="calculation-form__progress-steps">
+                  <div class="calculation-form__progress-step active">Шаг 1</div>
+                  <div class="calculation-form__progress-step active">Шаг 2</div>
+                  <div class="calculation-form__progress-step">Шаг 3</div>
+                  <div class="calculation-form__progress-step">Финиш</div>
+                </div>
+              </div>
 
-          <div class="calculation-form__block"></div>
+              <div class="calculation-form__main">
+                <h3 class="calculation-form__title">Выберите услуги, которые хотите заказать</h3>
 
-          <div class="calculation-form__block" data-calculation-block="finish"></div>
+                <div class="calculation-form__content">
+                  <div class="calculation-form__services">
+                    <div class="calculation-form__service">
+                      <input class="calculation-form__service-input" type="checkbox" id="calculation-service-1" checked>
 
+                      <label class="calculation-form__service-label" for="calculation-service-1">
+                        <div class="calculation-form__service-check"></div>
+                        <p class="calculation-form__service-text">Мойка, химчистка</p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__service">
+                      <input class="calculation-form__service-input" type="checkbox" id="calculation-service-2">
+
+                      <label class="calculation-form__service-label" for="calculation-service-2">
+                        <div class="calculation-form__service-check"></div>
+                        <p class="calculation-form__service-text">Шумоизоляция</p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__service">
+                      <input class="calculation-form__service-input" type="checkbox" id="calculation-service-3">
+
+                      <label class="calculation-form__service-label" for="calculation-service-3">
+                        <div class="calculation-form__service-check"></div>
+                        <p class="calculation-form__service-text">Ателье</p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__service">
+                      <input class="calculation-form__service-input" type="checkbox" id="calculation-service-4">
+
+                      <label class="calculation-form__service-label" for="calculation-service-4">
+                        <div class="calculation-form__service-check"></div>
+                        <p class="calculation-form__service-text">Автозвук</p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__service">
+                      <input class="calculation-form__service-input" type="checkbox" id="calculation-service-5">
+
+                      <label class="calculation-form__service-label" for="calculation-service-5">
+                        <div class="calculation-form__service-check"></div>
+                        <p class="calculation-form__service-text">Покрытие керамикой, жидким стеклом</p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__service">
+                      <input class="calculation-form__service-input" type="checkbox" id="calculation-service-6">
+
+                      <label class="calculation-form__service-label" for="calculation-service-6">
+                        <div class="calculation-form__service-check"></div>
+                        <p class="calculation-form__service-text">Аэрография, аквапринт</p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__service">
+                      <input class="calculation-form__service-input" type="checkbox" id="calculation-service-6">
+
+                      <label class="calculation-form__service-label" for="calculation-service-6">
+                        <div class="calculation-form__service-check"></div>
+                        <p class="calculation-form__service-text">Антикоррозийная обработка</p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__service">
+                      <input class="calculation-form__service-input" type="checkbox" id="calculation-service-8">
+
+                      <label class="calculation-form__service-label" for="calculation-service-8">
+                        <div class="calculation-form__service-check"></div>
+                        <p class="calculation-form__service-text">Дооснащение,
+                          локализация</p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__service">
+                      <input class="calculation-form__service-input" type="checkbox" id="calculation-service-9">
+
+                      <label class="calculation-form__service-label" for="calculation-service-9">
+                        <div class="calculation-form__service-check"></div>
+                        <p class="calculation-form__service-text">Оклейка антинравийной, виниловой пленкой, бронирование
+                        </p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__service">
+                      <input class="calculation-form__service-input" type="checkbox" id="calculation-service-10">
+
+                      <label class="calculation-form__service-label" for="calculation-service-10">
+                        <div class="calculation-form__service-check"></div>
+                        <p class="calculation-form__service-text">Тонировка пленкой, электронная тонировка стекол и
+                          элементов</p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__service">
+                      <input class="calculation-form__service-input" type="checkbox" id="calculation-service-11">
+
+                      <label class="calculation-form__service-label" for="calculation-service-11">
+                        <div class="calculation-form__service-check"></div>
+                        <p class="calculation-form__service-text">Ремонт вмятин, стекол, оптики, трещин, царапин</p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__service">
+                      <input class="calculation-form__service-input" type="checkbox" id="calculation-service-12">
+
+                      <label class="calculation-form__service-label" for="calculation-service-12">
+                        <div class="calculation-form__service-check"></div>
+                        <p class="calculation-form__service-text">Механический и чип-тюнинг</p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__service">
+                      <input class="calculation-form__service-input" type="checkbox" id="calculation-service-13">
+
+                      <label class="calculation-form__service-label" for="calculation-service-13">
+                        <div class="calculation-form__service-check"></div>
+                        <p class="calculation-form__service-text">Полировка</p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__service">
+                      <input class="calculation-form__service-input" type="checkbox" id="calculation-service-14">
+
+                      <label class="calculation-form__service-label" for="calculation-service-14">
+                        <div class="calculation-form__service-check"></div>
+                        <p class="calculation-form__service-text">Антихром, хромирование</p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__service">
+                      <input class="calculation-form__service-input" type="checkbox" id="calculation-service-15">
+
+                      <label class="calculation-form__service-label" for="calculation-service-15">
+                        <div class="calculation-form__service-check"></div>
+                        <p class="calculation-form__service-text">Рестайлинг</p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__service">
+                      <input class="calculation-form__service-input" type="checkbox" id="calculation-service-16">
+
+                      <label class="calculation-form__service-label" for="calculation-service-16">
+                        <div class="calculation-form__service-check"></div>
+                        <p class="calculation-form__service-text">Защита от угона</p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__service">
+                      <input class="calculation-form__service-input" type="checkbox" id="calculation-service-17">
+
+                      <label class="calculation-form__service-label" for="calculation-service-17">
+                        <div class="calculation-form__service-check"></div>
+                        <p class="calculation-form__service-text">Реставрация салона</p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__service">
+                      <input class="calculation-form__service-input" type="checkbox" id="calculation-service-18">
+
+                      <label class="calculation-form__service-label" for="calculation-service-18">
+                        <div class="calculation-form__service-check"></div>
+                        <p class="calculation-form__service-text">Покраска дисков</p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__service">
+                      <input class="calculation-form__service-input" type="checkbox" id="calculation-service-19">
+
+                      <label class="calculation-form__service-label" for="calculation-service-19">
+                        <div class="calculation-form__service-check"></div>
+                        <p class="calculation-form__service-text">Тонировка</p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__service">
+                      <input class="calculation-form__service-input" type="checkbox" id="calculation-service-20">
+
+                      <label class="calculation-form__service-label" for="calculation-service-20">
+                        <div class="calculation-form__service-check"></div>
+                        <p class="calculation-form__service-text">Индивидуальный тюнинг</p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__service">
+                      <input class="calculation-form__service-input" type="checkbox" id="calculation-service-21">
+
+                      <label class="calculation-form__service-label" for="calculation-service-21">
+                        <div class="calculation-form__service-check"></div>
+                        <p class="calculation-form__service-text">Предпродажная подготовка</p>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="calculation-form__footer">
+                  <div class="calculation-form__footer-btns">
+                    <button type="button" class="calculation-form__btn-prev btn">
+                      <img width="30" height="30" src="./img/icons/form-arrow.svg" alt="arrow icon">
+                      <span>Назад</span>
+                    </button>
+                    <button type="button" class="calculation-form__btn btn">
+                      <span>Далее</span>
+                      <img width="30" height="30" src="./img/icons/form-arrow.svg" alt="arrow icon">
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="calculation-form__aside">
+              <div class="calculation-form__aside-banner">
+                <picture>
+                  <source
+                    srcset="./img/calculation-form/banner/banner-1.webp 1x, ./img/calculation-form/banner/banner-1@2x.webp 2x"
+                    type="image/webp">
+                  <source
+                    srcset="./img/calculation-form/banner/banner-1.png 1x, ./img/calculation-form/banner/banner-1@2x.png 2x"
+                    type="image/png">
+                  <img src="./img/calculation-form/banner/banner-1.png"
+                    srcset="./img/calculation-form/banner/banner-1@2x.png" alt="car pic">
+                </picture>
+              </div>
+            </div>
+          </div>
+
+          <div class="calculation-form__block" data-calculation-block="3">
+            <div class="calculation-form__inner">
+              <div class="calculation-form__progress">
+                <div class="calculation-form__progress-line">
+                  <div class="calculation-form__progress-line-inner" style="width: 70%;"></div>
+                </div>
+                <div class="calculation-form__progress-steps">
+                  <div class="calculation-form__progress-step active">Шаг 1</div>
+                  <div class="calculation-form__progress-step active">Шаг 2</div>
+                  <div class="calculation-form__progress-step active">Шаг 3</div>
+                  <div class="calculation-form__progress-step">Финиш</div>
+                </div>
+              </div>
+
+              <div class="calculation-form__main">
+                <h3 class="calculation-form__title">Выберите свой подарок</h3>
+
+                <div class="calculation-form__content">
+
+                  <div class="calculation-form__gifts">
+                    <div class="calculation-form__gift">
+                      <input class="calculation-form__gift-input" type="radio" name="car-gift" id="car-gift-1" checked>
+
+                      <label class="calculation-form__gift-label" for="car-gift-1">
+                        <img class="calculation-form__gift-pic" src="./img/calculation-form/gifts/cleaning-spray.png"
+                          alt="gift icon">
+                        <p class="calculation-form__gift-text">
+                          Химчистка <br />
+                          сидений
+                        </p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__gift">
+                      <input class="calculation-form__gift-input" type="radio" name="car-gift" id="car-gift-2">
+
+                      <label class="calculation-form__gift-label" for="car-gift-2">
+                        <img class="calculation-form__gift-pic" src="./img/calculation-form/gifts/car.png"
+                          alt="gift icon">
+                        <p class="calculation-form__gift-text">
+                          Скидка 10% на защиту кузова антигравийной пленокй
+                        </p>
+                      </label>
+                    </div>
+
+                    <div class="calculation-form__gift">
+                      <input class="calculation-form__gift-input" type="radio" name="car-gift" id="car-gift-3">
+
+                      <label class="calculation-form__gift-label" for="car-gift-3">
+                        <img class="calculation-form__gift-pic"
+                          src="./img/calculation-form/gifts/vector-illustration-car-headlight-block.png"
+                          alt="gift icon">
+                        <p class="calculation-form__gift-text">
+                          Бронирование фар полиуретановой пленкой
+                        </p>
+                      </label>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="calculation-form__footer">
+                  <div class="calculation-form__footer-btns">
+                    <button type="button" class="calculation-form__btn-prev btn">
+                      <img width="30" height="30" src="./img/icons/form-arrow.svg" alt="arrow icon">
+                      <span>Назад</span>
+                    </button>
+                    <button type="button" class="calculation-form__btn btn">
+                      <span>Далее</span>
+                      <img width="30" height="30" src="./img/icons/form-arrow.svg" alt="arrow icon">
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="calculation-form__aside">
+              <div class="calculation-form__aside-banner">
+                <picture>
+                  <source
+                    srcset="./img/calculation-form/banner/banner-1.webp 1x, ./img/calculation-form/banner/banner-1@2x.webp 2x"
+                    type="image/webp">
+                  <source
+                    srcset="./img/calculation-form/banner/banner-1.png 1x, ./img/calculation-form/banner/banner-1@2x.png 2x"
+                    type="image/png">
+                  <img src="./img/calculation-form/banner/banner-1.png"
+                    srcset="./img/calculation-form/banner/banner-1@2x.png" alt="car pic">
+                </picture>
+              </div>
+            </div>
+          </div>
+
+          <div class="calculation-form__block" data-calculation-block="4">
+            <div class="calculation-form__inner">
+              <div class="calculation-form__progress">
+                <div class="calculation-form__progress-line">
+                  <div class="calculation-form__progress-line-inner" style="width: 90%;"></div>
+                </div>
+                <div class="calculation-form__progress-steps">
+                  <div class="calculation-form__progress-step active">Шаг 1</div>
+                  <div class="calculation-form__progress-step active">Шаг 2</div>
+                  <div class="calculation-form__progress-step active">Шаг 3</div>
+                  <div class="calculation-form__progress-step">Финиш</div>
+                </div>
+              </div>
+
+              <div class="calculation-form__main">
+                <h3 class="calculation-form__title">Мы всё посчитаем и свяжемся с вами!</h3>
+
+                <div class="calculation-form__content">
+
+                  <div class="form__rows form__rows--grid">
+                    <div class="form__row">
+                      <label class="form__label" for="#">Имя</label>
+
+                      <input class="form__input" type="text" placeholder="Ваше имя">
+                    </div>
+
+                    <div class="form__row">
+                      <label class="form__label" for="#">Когда Вам удобно приехать в наш центр? </label>
+
+                      <!-- <input type="hidden" id="datepicker" data-inline="true" /> -->
+                      <div class="form__datepicker form__input">
+                        <input class="form__datepicker-input " type="text" id="datepicker">
+                        <img class="form__datepicker-icon" width="24" height="24" src="./img/icons/calendar.svg"
+                          alt="calendar icon">
+                      </div>
+                    </div>
+
+                    <div class="form__row">
+                      <label class="form__label" for="#">Выберите удобный способ связи</label>
+
+                      <div class="select-wrapper">
+                        <select>
+                          <option value="Телефон" selected>Telegram</option>
+                          <option value="Телефон 2">Телефон 2</option>
+                          <option value="Телефон 3">Телефон 3</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form__row">
+                      <label class="form__label" for="#">Номер телефона или telegram @username</label>
+
+                      <input class="form__input" type="text">
+                    </div>
+
+                    <div class="form__times">
+                      <label class="form__label" for="#">Выберите удобное время для связи</label>
+
+                      <ul class="form__times-list">
+                        <li class="form__times-item">
+                          <input class="form__times-input" type="radio" name="time" id="time-1" checked>
+
+                          <label class="form__times-label" for="time-1">
+                            <span>Сейчас</span>
+                          </label>
+                        </li>
+
+                        <li class="form__times-item">
+                          <input class="form__times-input" type="radio" name="time" id="time-2">
+
+                          <label class="form__times-label" for="time-2">
+                            <span>9:00-12:00</span>
+                          </label>
+                        </li>
+
+                        <li class="form__times-item">
+                          <input class="form__times-input" type="radio" name="time" id="time-3">
+
+                          <label class="form__times-label" for="time-3">
+                            <span>12:00-15:00</span>
+                          </label>
+                        </li>
+
+                        <li class="form__times-item">
+                          <input class="form__times-input" type="radio" name="time" id="time-4">
+
+                          <label class="form__times-label" for="time-4">
+                            <span>15:00-18:00</span>
+                          </label>
+                        </li>
+
+                        <li class="form__times-item">
+                          <input class="form__times-input" type="radio" name="time" id="time-5">
+
+                          <label class="form__times-label" for="time-5">
+                            <span>18.00: 20:00</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="calculation-form__footer">
+                  <div class="calculation-form__footer-btns">
+                    <button type="button" class="calculation-form__btn-prev btn">
+                      <img width="30" height="30" src="./img/icons/form-arrow.svg" alt="arrow icon">
+                      <span>Назад</span>
+                    </button>
+                    <button type="submit" class="calculation-form__btn btn">
+                      <span>Заказать</span>
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="calculation-form__aside">
+              <div class="calculation-form__aside-banner">
+                <picture>
+                  <source
+                    srcset="./img/calculation-form/banner/banner-1.webp 1x, ./img/calculation-form/banner/banner-1@2x.webp 2x"
+                    type="image/webp">
+                  <source
+                    srcset="./img/calculation-form/banner/banner-1.png 1x, ./img/calculation-form/banner/banner-1@2x.png 2x"
+                    type="image/png">
+                  <img src="./img/calculation-form/banner/banner-1.png"
+                    srcset="./img/calculation-form/banner/banner-1@2x.png" alt="car pic">
+                </picture>
+              </div>
+            </div>
+          </div>
+
+          <div class="calculation-form__block" data-calculation-block="finish">
+            <div class="calculation-form__inner">
+              <div class="calculation-form__progress">
+                <div class="calculation-form__progress-line">
+                  <div class="calculation-form__progress-line-inner" style="width: 100%;"></div>
+                </div>
+                <div class="calculation-form__progress-steps">
+                  <div class="calculation-form__progress-step active">Шаг 1</div>
+                  <div class="calculation-form__progress-step active">Шаг 2</div>
+                  <div class="calculation-form__progress-step active">Шаг 3</div>
+                  <div class="calculation-form__progress-step active">Финиш</div>
+                </div>
+              </div>
+
+              <div class="calculation-form__main">
+                <div class="calculation-form__content">
+                  <div class="calculation-form__finish">
+                    <h3 class="calculation-form__title">Спасибо за выбор SHINE Premium!</h3>
+                    <h3 class="calculation-form__title">
+                      В выбранное вами время <br />
+                      мы свяжемся с вами</h3>
+                  </div>
+                </div>
+
+                <div class="calculation-form__footer">
+                  <button type="submit" class="calculation-form__btn btn">
+                    <span>Супер!</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="calculation-form__aside">
+              <div class="calculation-form__aside-banner">
+                <picture>
+                  <source
+                    srcset="./img/calculation-form/banner/banner-1.webp 1x, ./img/calculation-form/banner/banner-1@2x.webp 2x"
+                    type="image/webp">
+                  <source
+                    srcset="./img/calculation-form/banner/banner-1.png 1x, ./img/calculation-form/banner/banner-1@2x.png 2x"
+                    type="image/png">
+                  <img src="./img/calculation-form/banner/banner-1.png"
+                    srcset="./img/calculation-form/banner/banner-1@2x.png" alt="car pic">
+                </picture>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-valid">Заполните все обязательные поля !</div>
         </form>
       </div>
     </div>
@@ -756,7 +1405,8 @@
 
 
 </body>
-
+<script src="./js/datepicker.js"></script>
+<script src="./js/custom-select.min.js"></script>
 <script src="./js/scripts.min.js"></script>
 
 </html>

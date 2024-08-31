@@ -111,6 +111,132 @@ function worksSlider() {
 
 worksSlider();
 
+document.addEventListener('DOMContentLoaded', function () {
+  const formBlocks = document.querySelectorAll('.calculation-form__block');
+  let currentBlockIndex = 0;
+
+  function showBlock(index) {
+    formBlocks.forEach((block, idx) => {
+      block.classList.toggle('active', idx === index);
+    });
+  }
+
+  function validateCurrentBlock() {
+    const currentBlock = formBlocks[currentBlockIndex];
+    const requiredInputs = currentBlock.querySelectorAll('input:required');
+    let isValid = true;
+
+    // General validation for required inputs
+    requiredInputs.forEach(input => {
+      if (input.type === 'radio' || input.type === 'checkbox') {
+        const name = input.name;
+        const checked = currentBlock.querySelector(`input[name="${name}"]:checked`);
+        if (!checked) {
+          isValid = false;
+        }
+      } else if (input.type === 'text' && input.value.trim() === '') {
+        isValid = false;
+      }
+    });
+
+    // Additional validation for the 4th block
+    if (currentBlockIndex === 3) {  // Assuming the fourth block is index 3
+      const nameInput = currentBlock.querySelector('input[type="text"][placeholder="Ваше имя"]');
+      const dateInput = currentBlock.querySelector('.form__datepicker-input');
+      const contactInput = currentBlock.querySelector('input[type="text"]:not([placeholder="Ваше имя"])');
+
+      if (!nameInput || nameInput.value.trim() === '') {
+        isValid = false;
+      }
+
+      if (!dateInput || dateInput.value.trim() === '') {
+        isValid = false;
+      }
+
+      if (!contactInput || contactInput.value.trim() === '') {
+        isValid = false;
+      }
+    }
+
+    // Toggle the 'active' class on the .form-valid element based on validation result
+    const formValidElement = document.querySelector('.form-valid');
+    if (formValidElement) {
+      formValidElement.classList.toggle('active', !isValid);
+    } else {
+      console.log('No .form-valid element found in the current block'); // Debug logging
+    }
+
+    return isValid;
+  }
+
+  function showValidationMessage() {
+    const validationMessage = document.createElement('div');
+    validationMessage.classList.add('validation-message');
+    validationMessage.textContent = 'Пожалуйста, заполните обязательные поля';
+    document.body.appendChild(validationMessage);
+
+    setTimeout(() => {
+      validationMessage.remove();
+    }, 3000);
+  }
+
+  // Обработчик для кнопки "Далее"
+  document.querySelectorAll('.calculation-form__btn').forEach(button => {
+    button.addEventListener('click', function () {
+      if (!validateCurrentBlock()) {
+        showValidationMessage();
+        return;
+      }
+
+      if (currentBlockIndex < formBlocks.length - 2) {
+        currentBlockIndex++;
+        showBlock(currentBlockIndex);
+      }
+    });
+  });
+
+  // Обработчик для кнопки "Назад"
+  document.querySelectorAll('.calculation-form__btn-prev').forEach(button => {
+    button.addEventListener('click', function () {
+      if (currentBlockIndex > 0) {
+        currentBlockIndex--;
+        showBlock(currentBlockIndex);
+      }
+    });
+  });
+
+  // Обработчик для кнопки "Заказать"
+  document.querySelector('.calculation-form__btn[type="submit"]').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    if (currentBlockIndex === formBlocks.length - 2) {
+      if (!validateCurrentBlock()) {
+        showValidationMessage();
+        return;
+      }
+
+      currentBlockIndex++;
+      showBlock(currentBlockIndex);
+    }
+  });
+
+  // Обработчик для кнопки "Супер!" на блоке "finish"
+  document.querySelector('.calculation-form__block[data-calculation-block="finish"] .calculation-form__btn[type="submit"]').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    currentBlockIndex = 0;
+    showBlock(currentBlockIndex);
+  });
+
+  // Изначально показываем первый блок
+  showBlock(currentBlockIndex);
+});
+
+
+
+
+
+
 
 // Аккордеон
 const accordionItems = document.querySelectorAll('[data-accordion-item]');

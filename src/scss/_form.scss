@@ -71,6 +71,17 @@
     display: flex;
     flex-direction: column;
     row-gap: 16px;
+
+    &--grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+      row-gap: 16px;
+
+      @media (max-width: $breakpoint768) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
   }
 
   // .form__row
@@ -177,6 +188,73 @@
   }
 }
 
+.form {
+
+  // .form__times
+
+  &__times {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+
+    grid-column: span 2;
+
+    @media (max-width: $breakpoint768) {
+      grid-column: span 1;
+    }
+  }
+
+  // .form__label
+
+  &__label {}
+
+  // .form__times-list
+
+  &__times-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 10px;
+      row-gap: 10px;
+    }
+  }
+
+  // .form__times-item
+
+  &__times-item {}
+
+  // .form__times-input
+
+  &__times-input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: -100;
+    opacity: 0;
+
+    &:checked~.form__times-label {
+      border-color: var(--primary);
+    }
+  }
+
+  // .form__times-label
+
+  &__times-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 48px;
+    white-space: nowrap;
+    border: 1px solid #707070;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+}
 
 
 
