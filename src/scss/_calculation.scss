@@ -1,4 +1,6 @@
 .calculation {
+  position: relative;
+  height: fit-content;
   margin: 150px 0;
 
   @media (max-width: $breakpoint1450) {
@@ -25,6 +27,9 @@
 
 .calculation-form {
   position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
 
   .form-valid {
     display: none;
@@ -54,6 +59,7 @@
     padding: 32px 40px 50px 60px;
     background: radial-gradient(50% 50% at 50% 50%, rgb(49, 49, 49) 0%, rgb(11, 11, 11) 100%);
     animation: fade 0.2s linear;
+    width: 100%;
 
     &.active {
       display: grid;
@@ -578,4 +584,15 @@
       width: calc(100% - 48px);
     }
   }
+}
+
+.observer-anchor {
+  position: absolute;
+  top: 0;
+  user-select: none;
+  pointer-events: none;
+  height: 600px;
+  /* Высота, которую вы хотите задать для отслеживания */
+  visibility: hidden;
+  /* Скрыть элемент, чтобы он не мешал визуально */
 }

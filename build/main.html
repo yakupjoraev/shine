@@ -13,6 +13,14 @@
 
 <body class="main__body">
   <div class="wrapper">
+    <div class="section-nums">
+      <div class="section-num active" data-section-num="00">00</div>
+      <div class="section-num" data-section-num="01">01</div>
+      <div class="section-num" data-section-num="02">02</div>
+      <div class="section-num" data-section-num="03">03</div>
+      <div class="section-num" data-section-num="04">04</div>
+      <div class="section-num" data-section-num="05">05</div>
+    </div>
     <div class="car car-top">
       <picture>
         <source srcset="./img/bg/car.webp 1x, ./img/bg/car@2x.webp 2x" type="image/webp">
@@ -121,7 +129,7 @@
 
     <!-- Main Page -->
     <main>
-      <section class="hero">
+      <section class="hero" data-section-num="00">
   <div class="container">
     <div class="hero__inner">
       <div class="hero__top">
@@ -180,7 +188,23 @@
     </div>
   </div>
 </section>
-      <section class="our-services">
+      <section class="special" data-section-num="01">
+  <div class="container">
+    <div class="special__inner">
+      <div class="section-head">
+        <div class="section-sum">01</div>
+        <h3 class="section-title">
+          Специальные предложения с большой скидкой
+        </h3>
+        <p class="section-text">Рекомендуем защитить лакокрасочное покрытие от сколов и царапин антигравийной пленкой
+          премиум класса!</p>
+      </div>
+
+      <div class="special__main"></div>
+    </div>
+  </div>
+</section>
+      <section class="our-services" data-section-num="02">
   <div class="container">
     <div class="our-services__inner">
       <div class="section-head">
@@ -522,7 +546,7 @@
     </div>
   </div>
 </section>
-      <section class="calculation">
+      <section class="calculation" data-section-num="03">
   <div class="container">
     <div class="calculation__inner">
       <div class="section-head">
@@ -1197,7 +1221,7 @@
     </div>
   </div>
 </section>
-      <section class="faq" id="faq">
+      <section class="faq" id="faq" data-section-num="04">
   <div class="container">
     <div class="faq__inner">
       <div class="section-head">
@@ -1264,7 +1288,7 @@
     </div>
   </div>
 </section>
-      <section class="about-studia">
+      <section class="about-studia" data-section-num="05">
   <div class="container">
     <div class="about-studia__inner">
       <div class="section-head">
@@ -1405,6 +1429,9 @@
 
 
 </body>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+
+
 <script src="./js/datepicker.js"></script>
 <script src="./js/custom-select.min.js"></script>
 <script src="./js/scripts.min.js"></script>

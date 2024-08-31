@@ -123,3 +123,39 @@
 .car-bottom {
   bottom: 0;
 }
+
+.section-nums {
+  position: fixed;
+  bottom: 20vh;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  user-select: none;
+  pointer-events: none;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+
+
+  @media (max-width: $breakpoint1450) {
+    display: none;
+  }
+
+}
+
+.section-num {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #606060;
+
+  &.active {
+    color: var(--white);
+  }
+
+}

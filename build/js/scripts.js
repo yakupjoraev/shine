@@ -113,6 +113,11 @@ function worksSlider() {
 worksSlider();
 
 document.addEventListener('DOMContentLoaded', function () {
+  const container = document.querySelector('.calculation-form');
+  if (!container) {
+    return null
+  }
+
   const formBlocks = document.querySelectorAll('.calculation-form__block');
   let currentBlockIndex = 0;
 
@@ -231,6 +236,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Изначально показываем первый блок
   showBlock(currentBlockIndex);
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.section-nums');
+  if (!container) {
+    return null
+  }
+
+  const sectionSums = document.querySelectorAll('.section-num');
+  const sections = document.querySelectorAll('section');
+
+  // Создаем IntersectionObserver для секций
+  const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const sectionNum = entry.target.dataset.sectionNum;
+      const sectionSum = document.querySelector(`.section-num[data-section-num="${sectionNum}"]`);
+
+      // Если секция видима, активируем соответствующий элемент в меню
+      if (entry.isIntersecting) {
+        sectionSums.forEach(sum => sum.classList.remove('active'));
+        if (sectionSum) sectionSum.classList.add('active');
+      } else {
+        if (sectionSum) sectionSum.classList.remove('active');
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.2 // Порог видимости (10% секции должно быть видно)
+  });
+
+  // Наблюдаем за всеми секциями
+  sections.forEach(section => {
+    sectionObserver.observe(section);
+  });
 });
 
 

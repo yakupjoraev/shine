@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @font-face {
   font-family: "Golos Text";
   src: url("../fonts/GolosText-Regular.woff2") format("woff2"), url("../fonts/GolosText-Regular.woff") format("woff");
@@ -280,6 +282,44 @@ body.locked {
 
 .car-bottom {
   bottom: 0;
+}
+
+.section-nums {
+  position: fixed;
+  bottom: 20vh;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 50px;
+}
+
+.section-num {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #606060;
+}
+
+.section-num.active {
+  color: var(--white);
 }
 
 .navbar {
@@ -1625,11 +1665,22 @@ body.locked {
 }
 
 .calculation {
+  position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin: 150px 0;
 }
 
 .calculation-form {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 
 .calculation-form .form-valid {
@@ -1659,6 +1710,7 @@ body.locked {
   background: radial-gradient(50% 50% at 50% 50%, #313131 0%, #0b0b0b 100%);
   -webkit-animation: fade 0.2s linear;
           animation: fade 0.2s linear;
+  width: 100%;
 }
 
 .calculation-form__block.active {
@@ -2060,6 +2112,20 @@ body.locked {
   position: relative;
 }
 
+.observer-anchor {
+  position: absolute;
+  top: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  height: 600px;
+  /* Высота, которую вы хотите задать для отслеживания */
+  visibility: hidden;
+  /* Скрыть элемент, чтобы он не мешал визуально */
+}
+
 .banner__tg {
   position: relative;
   border-radius: 10px;
@@ -2454,6 +2520,10 @@ body.locked {
 
   .section-title {
     font-size: 48px;
+  }
+
+  .section-nums {
+    display: none;
   }
 
   .service {
