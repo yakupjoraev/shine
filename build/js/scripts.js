@@ -303,6 +303,25 @@ specialTabs();
 
 
 
+//плавный скролл
+const anchors = document.querySelectorAll('a[href*="#"]');
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    const blockID = anchor.getAttribute('href').substr(1);
+    const element = document.getElementById(blockID);
+
+    const offsetTop = element.getBoundingClientRect().top + window.pageYOffset - 60;
+
+    window.scrollTo({
+      top: offsetTop,
+      behavior: 'smooth'
+    });
+  });
+}
+
 
 
 // Аккордеон
