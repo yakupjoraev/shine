@@ -65,6 +65,7 @@ footer,
 header,
 section {
   display: block;
+  letter-spacing: 2px;
 }
 
 body {
@@ -80,6 +81,7 @@ input::-ms-clear {
 
 button {
   cursor: pointer;
+  letter-spacing: 2px;
 }
 
 button::-moz-focus-inner {
@@ -90,6 +92,7 @@ button::-moz-focus-inner {
 a,
 a:visited {
   text-decoration: none;
+  letter-spacing: 2px;
 }
 
 a:hover {
@@ -98,6 +101,7 @@ a:hover {
 
 ul li {
   list-style: none;
+  letter-spacing: 2px;
 }
 
 img {
@@ -112,6 +116,7 @@ h5,
 h6 {
   font-weight: inherit;
   font-size: inherit;
+  letter-spacing: 2px;
 }
 
 .container {
@@ -133,6 +138,7 @@ html {
 
 body {
   font-family: var(--font-family);
+  letter-spacing: 2px;
   color: var(--white);
 }
 
@@ -2140,7 +2146,7 @@ body.locked {
   background: var(--black);
   font-family: var(--second-family);
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 120%;
   text-align: center;
   color: var(--white);
