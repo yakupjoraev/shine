@@ -133,7 +133,7 @@
     font-family: var(--second-family);
     font-weight: 700;
     font-size: 14px;
-    line-height: 100%;
+    line-height: 120%;
     color: var(--white);
 
     &:last-child {
@@ -172,7 +172,7 @@
     font-family: var(--second-family);
     font-weight: 700;
     font-size: 32px;
-    line-height: 100%;
+    line-height: 120%;
     color: var(--white);
 
     @media (max-width: $breakpoint768) {
@@ -317,7 +317,7 @@
     font-family: var(--second-family);
     font-weight: 400;
     font-size: 18px;
-    line-height: 90%;
+    line-height: 120%;
     text-align: center;
     color: var(--white);
     cursor: pointer;
@@ -548,7 +548,7 @@
     font-family: var(--second-family);
     font-weight: 700;
     font-size: 16px;
-    line-height: 100%;
+    line-height: 120%;
     text-align: center;
     color: var(--white);
 
